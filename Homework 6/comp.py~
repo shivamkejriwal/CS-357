@@ -1,0 +1,12 @@
+from scipy import linalg as la
+import numpy as np
+x = np.roots([10,5,-5,1])
+print x
+print 1
+a = la.companion([10,5,-5,1])
+print a
+print 1
+print 2
+
+b=la.eig(a)
+print b

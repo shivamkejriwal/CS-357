@@ -1,0 +1,21 @@
+import numpy as np
+import scipy as sp
+
+x	= .5
+h	= 1
+tol	= .5*(10)**(-8)
+error = tol
+count=0
+while count<28:
+#while (np.sin(x+h)-np.sin(x))/h>0:
+#while error>=tol:
+	count=count+1
+	h=.25*h
+	y=(np.sin(x+h)-np.sin(x))/h
+	error = np.abs(np.cos(x)-y)
+	print 'count:{0},y:{1},h:{2},error:{3}'.format(count,y,h,error)
+print '------------'
+print 'y is: {0}'.format(y)
+print 'h is: {0}'.format(h)
+print 'count is: {0}'.format(count)
+print 'error is: {0}'.format(error)
